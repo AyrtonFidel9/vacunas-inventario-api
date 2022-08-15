@@ -15,7 +15,7 @@ public interface iEmpleadoRepository extends CrudRepository<Empleado, Integer> {
     @Query(value =
             "SELECT * FROM empleados " +
             "INNER JOIN vacunas" +
-            "empleados.id_empleado = vacunas.id_empleado" +
+            "ON empleados.id_empleado = vacunas.id_empleado" +
                     "WHERE vacunas.tipo=:tipo", nativeQuery = true)
     List<Empleado> findEmpleadosByTipoVacuna(@Param("tipo")String tipo);
 
@@ -24,7 +24,7 @@ public interface iEmpleadoRepository extends CrudRepository<Empleado, Integer> {
     @Query(value =
             "SELECT * FROM empleados " +
                     "INNER JOIN vacunas" +
-                    "empleados.id_empleado = vacunas.id_empleado" +
+                    "ON empleados.id_empleado = vacunas.id_empleado" +
                     "WHERE vacunas.fecha BETWEEN :inicio AND :fin", nativeQuery = true)
     List<Empleado> findEmpleadosByRangoFecha(@Param("inicio")LocalDate inicio, @Param("fin")LocalDate fin);
 
