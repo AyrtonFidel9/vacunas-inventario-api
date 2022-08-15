@@ -34,3 +34,7 @@ El sistema validará que los nombres o apellidos del usuario no contengan digito
 - JWT
 - SPRING BOOT
 - SPRING BOOT SECURITY
+
+5. Ejecucion
+![image](https://user-images.githubusercontent.com/70295855/184644931-f15e6d35-6522-4a7c-8a54-75616640ef2a.png)
+![image](https://user-images.githubusercontent.com/70295855/184644980-ab5279e1-6155-4666-99d4-c0ed80397628.png)
